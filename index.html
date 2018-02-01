@@ -17,12 +17,12 @@
     <main role="main" class="d-flex flex-column h-100">
 
     <header class="header clearfix border">
-      <nav class="navbar navbar-expand-md navbar-light bg-white">
+      <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white">
         <a class="navbar-brand" href="#">
           <img src="https://www.meetup.com/mu_static/en-US/004ada050440a14f84dbb068035be043.svg" width="80">
         </a>
          <form class="form-inline ml-auto" action="/">
-    <input class="form-control mr-sm-2" type="search" aria-label="Search">
+    <input class="form-control mr-sm-2" type="search" aria-label="Search" autofocus="" placeholder="search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
       </nav>
@@ -38,12 +38,12 @@
             <div class="flex-sm-nowrap flex-wrap media">
               <img width="50" id="avatar" class="mr-3" src="http://via.placeholder.com/100x100" alt="Generic placeholder image">
               <div class="media-body">
-                <h3><small class="text-muted">XXX</small><br/><span class="font-weight-bold">XXX</span></h3>
+                <h3><small class="text-muted">Past Meetup</small><br/><span class="font-weight-bold">Node.js Meetup Berlin</span></h3>
 
 
-                <ul class="list-unstyled " >
-                  <li class="border-0">Hosted by XXX</li>
-                  <li class="border-0">From  XXX</li>
+                <ul class="list-unstyled">
+                  <li class="border-0">Hosted by Karyn Fletcher</li>
+                  <li class="border-0">From  Montreal</li>
                 </ul>
               </div>
             </div>
@@ -63,10 +63,10 @@
     <div class="bg-light flex-grow">
       <div class="container py-5">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-8">
             <h3>Details:</h3>
-            <div class="preview faded mb-5 position-relative">
-              <div class="content">
+            <div class="faded mb-5 position-relative">
+              <div class="content" id="newText">
                 <p>Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <p>Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
@@ -77,13 +77,13 @@
             <div id="attendees-list" class="my-5">
               <img id="avatar">
               <span></span>
-
+              
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="card">
               <div class="card-header bg-white">
-                <span>XXX</span>
+                <span id="timeDisplay">XXX</span>
               </div>
               <img src="https://maps.google.com/maps/api/staticmap?zoom=17&amp;scale=2&amp;size=480x300&amp;markers=color%3Ared%7Csize%3Alarge%7C52.501862%2C13.411262&amp;sensor=false&amp;client=gme-meetup1&amp;signature=qBa2VEraU0f2pyNOT70E2a5wTyQ%3D" class="venueMap-mapImg w-100" alt="Location image of event venue">
             </div>

@@ -86,10 +86,12 @@ class ViewLayer {
   constructor() {
     this.elements = {
       'more': document.getElementById('more'),
-      'preview': document.querySelector('.preview'),
+      'preview': document.querySelector('preview'),
       'aList': document.getElementById('attendees-list'),
       'date': document.getElementById('date'),
       'img': document.getElementById('avatar'),
+      'span': document.getElementById('timeDisplay'),
+      
     }
     this.moreEventListener()
     this.showData(data)
@@ -98,23 +100,34 @@ class ViewLayer {
   moreEventListener(){
     this.elements.more.addEventListener("click", (e) => {
       e.preventDefault();
-      // code for task #3
+                                    // code for task #3
     });
   }
-  showAttendeesList(data){
+  
+
+  showAttendeesList(data){                        
     for (var i in data.attendees) {
       let element = document.createElement('li');
       element.classList.add('list-group-item');
-      let img = document.createElement('img')
-      img.src = data.attendees[key].image
-      element.innerHTML = data.attendees[key].name;
+      let img = document.createElement('img');
+      img.src = ("https://secure.meetupstatic.com/photos/member/6/9/4/b/member_261506955.jpeg"); 
+      //img.style.borderRadius = 50%;        
+      element.innerHTML = data.attendees.name;
       this.elements.aList.appendChild(element).appendChild(img);
+      
     };
   }
-  showData(data = {}){
-    // here comes code for task #7
+
+
+  
+  showData(data = {}){  // "a={}" means that we take an empty object instance, here as parameter  
+ 
+    /*  let div = document.getElementById('#newText');
+     document.div.innerText = document.div.innerText.replace("Talk #1: Job Queues, Deployment and Sandboxing Tim will share insights and give practical examples of architectural and code issues he ran into while building his SaaS tool Checkly (https://checklyhq.com). \n\r Talk #2: Debugging & Performance Analysis in Node.js Dominic Umbeer will share some approaches to keep track of system performance and tools for debugging and performance analysis, such as node-inspect, Chrome DevTools & New Relic. Always track performance after significant internal code changes! :) \n\r ----- \n\r JOBS NOTICE: If you're looking for an exciting new tech job or you're looking to hire great devs, please use www.upandfront.com (https://www.upandfront.com/?nmbj0118). It's a 100% dev-run agency and they help us keep the meetups about code only. Register in under half a minute!");              */                        // here comes code for task #7
     this.elements.date.innerHTML = `<button class=\"btn\">${ data.meta.day }</button>${data.meta.month}`
-    this.elements.img.src = data.organizer.img
+    this.elements.img.src = data.organizer.img;
+     
   }
 }
 const instance_of_view = new ViewLayer();
+
